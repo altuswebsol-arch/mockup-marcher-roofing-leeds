@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcher Roofing Limited | Family-Run Roofers in Leeds Since 1997</title>
+<meta name="description" content="Marcher Roofing Limited — family-run roofing specialists based in Leeds since 1997. Pitched roof repairs, flat roofing, new roofs, commercial and industrial roofing across West Yorkshire. Request a free survey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14181d; --bg2:#10141a; --panel:#1b2129; --panel2:#222a34;
+  --orange:#ff6a00; --orange-dim:rgba(255,106,0,.12); --orange-line:rgba(255,106,0,.35);
+  --ink:#f4f2ec; --muted:#a7adb6; --line:#2b333d;
+  --font-d:'Barlow Condensed',sans-serif; --font-b:'Barlow',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-b);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.kicker{font-family:var(--font-d);font-size:15px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--orange)}
+.kicker::before{content:"▮ ";letter-spacing:1px}
+h1,h2,h3{font-family:var(--font-d);font-weight:700;letter-spacing:.5px;line-height:1; text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-d);font-weight:600;font-size:17px;letter-spacing:2.5px;text-transform:uppercase;padding:17px 34px;border-radius:4px;transition:.25s;cursor:pointer;border:1px solid transparent}
+.btn-solid{background:var(--orange);color:#14181d}
+.btn-solid:hover{background:#ff7f26;box-shadow:0 8px 30px rgba(255,106,0,.45);transform:translateY(-2px)}
+.btn-ghost{border-color:#4a545f;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+section{padding:110px 0;position:relative}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(16,20,26,.88);backdrop-filter:blur(14px);border-bottom:2px solid var(--orange)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.logo{font-family:var(--font-d);font-size:28px;font-weight:700;letter-spacing:1.5px;line-height:1}
+.logo b{color:var(--orange)}
+.logo small{display:block;font-size:11px;letter-spacing:3.5px;color:var(--muted);font-weight:500;margin-top:3px}
+.nav-links{display:flex;gap:32px;font-family:var(--font-d);font-size:16px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase}
+.nav-links a{color:var(--muted);transition:.2s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{font-family:var(--font-d);font-weight:600;font-size:16px;letter-spacing:2.5px;text-transform:uppercase;color:#14181d;background:var(--orange);padding:11px 24px;border-radius:4px;transition:.2s}
+.nav-cta:hover{background:#ff7f26}
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;padding:170px 0 100px;overflow:hidden;background:url('https://images.unsplash.com/photo-1635424710928-0544e8512eae?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(16,20,26,.95) 30%,rgba(16,20,26,.72) 55%,rgba(16,20,26,.35))}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(74px,9.5vw,150px);margin:20px 0 6px}
+.hero h1 .o1{color:var(--ink)}
+.hero h1 .o2{color:var(--orange);text-shadow:0 0 40px rgba(255,106,0,.35)}
+.hero-sub{font-size:19px;color:#d7dbe0;max-width:560px;margin:22px 0 36px}
+.hero-sub b{color:var(--ink)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.trust{margin-top:52px;border-top:1px solid rgba(255,255,255,.15);padding-top:26px;display:flex;gap:40px;flex-wrap:wrap}
+.trust div{font-family:var(--font-d);font-size:16px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#d7dbe0;display:flex;align-items:center;gap:12px}
+.trust div::before{content:"";width:10px;height:10px;background:var(--orange);transform:rotate(45deg);flex:none}
+/* hazard stripe */
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--orange) 0 22px,#14181d 22px 44px)}
+/* ---------- services ---------- */
+.sec-head{margin-bottom:56px;max-width:760px}
+.sec-head h2{font-size:clamp(46px,5.5vw,76px);margin:14px 0 16px}
+.sec-head h2 em{font-style:normal;color:var(--orange)}
+.sec-head p{color:var(--muted);font-size:17px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:.3s;cursor:pointer;position:relative}
+.svc:hover{transform:translateY(-8px);border-color:var(--orange-line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+.svc .imgwrap{position:relative;overflow:hidden}
+.svc img{height:230px;width:100%;object-fit:cover;filter:saturate(.9) contrast(1.05);transition:.5s}
+.svc:hover img{transform:scale(1.06)}
+.svc .imgwrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(20,24,29,.65))}
+.svc .num{position:absolute;top:16px;left:16px;z-index:2;font-family:var(--font-d);font-weight:700;font-size:15px;letter-spacing:2px;background:var(--orange);color:#14181d;padding:5px 12px;border-radius:3px}
+.svc-body{padding:26px 26px 30px}
+.svc-body h3{font-size:26px;margin-bottom:10px;letter-spacing:1px}
+.svc-body h3::before{content:"▮ ";color:var(--orange)}
+.svc-body p{font-size:15px;color:var(--muted)}
+.svc-body .go{display:inline-block;margin-top:16px;font-family:var(--font-d);font-weight:600;font-size:15px;letter-spacing:2.5px;text-transform:uppercase;color:var(--orange)}
+/* ---------- why marcher band ---------- */
+.why{background:var(--bg2);border-top:2px solid var(--orange);border-bottom:2px solid var(--orange);overflow:hidden}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.why-img{position:relative}
+.why-img img{border-radius:8px;height:520px;width:100%;object-fit:cover;border:1px solid var(--line)}
+.why-img::before{content:"SINCE 1997";position:absolute;top:-22px;left:28px;z-index:2;background:var(--orange);color:#14181d;font-family:var(--font-d);font-weight:700;font-size:20px;letter-spacing:3px;padding:10px 22px;border-radius:4px;transform:rotate(-3deg)}
+.why-copy h2{font-size:clamp(44px,5vw,70px);margin:14px 0 18px}
+.why-copy h2 em{font-style:normal;color:var(--orange)}
+.why-copy>p{color:var(--muted);font-size:17px;margin-bottom:8px}
+.why-list{list-style:none;margin-top:28px;display:grid;gap:20px}
+.why-list li{display:flex;gap:16px;align-items:flex-start;font-size:16px;color:var(--muted)}
+.why-list li b{color:var(--ink)}
+.why-list .tick{flex:none;width:30px;height:30px;border-radius:4px;background:var(--orange-dim);border:1px solid var(--orange-line);color:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:700}
+/* ---------- tv band ---------- */
+.tv{background:var(--orange);color:#14181d;text-align:center;padding:64px 0}
+.tv .kicker{color:#14181d}
+.tv .kicker::before{content:"★ "}
+.tv h2{font-size:clamp(38px,4.5vw,60px);margin:12px 0 10px}
+.tv p{font-weight:500;font-size:18px;max-width:640px;margin:0 auto}
+/* ---------- areas ---------- */
+.areas{text-align:center}
+.areas h2{font-size:clamp(44px,5vw,68px);margin:14px 0}
+.areas h2 em{font-style:normal;color:var(--orange)}
+.areas>p{color:var(--muted)}
+.area-chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px}
+.area-chips span{font-family:var(--font-d);font-size:17px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;border:1px solid var(--line);border-radius:4px;padding:12px 26px;color:var(--muted);transition:.2s;background:var(--panel)}
+.area-chips span:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-3px)}
+/* ---------- quote ---------- */
+.quote{background:var(--bg2);border-top:1px solid var(--line)}
+.quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.q-info h2{font-size:clamp(46px,5vw,70px);margin:14px 0 18px}
+.q-info h2 em{font-style:normal;color:var(--orange)}
+.q-info p{color:var(--muted);font-size:17px}
+.q-steps{list-style:none;margin-top:30px;display:grid;gap:18px}
+.q-steps li{display:flex;gap:18px;align-items:center;font-size:16px}
+.q-steps .st{flex:none;width:44px;height:44px;border-radius:4px;background:var(--orange);color:#14181d;font-family:var(--font-d);font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center}
+form{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:8px;padding:42px;display:grid;gap:18px;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{font-family:var(--font-d);font-size:15px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);display:grid;gap:8px}
+input,select,textarea{background:#10141a;border:1px solid var(--line);border-radius:4px;color:var(--ink);font-family:var(--font-b);font-size:15px;padding:14px 16px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,106,0,.15)}
+select{appearance:none}
+textarea{min-height:120px;resize:vertical}
+.form-note{font-size:13px;color:var(--muted);text-align:center}
+/* ---------- footer ---------- */
+footer{border-top:2px solid var(--orange);padding:48px 0;background:#0c0f13}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.foot .fname{font-family:var(--font-d);font-size:22px;font-weight:700;letter-spacing:1.5px;color:var(--ink)}
+.foot .fname b{color:var(--orange)}
+.badge{border:1px solid var(--orange);color:var(--orange);border-radius:40px;padding:10px 24px;font-family:var(--font-d);font-size:15px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:.2s;display:inline-block}
+.badge:hover{background:var(--orange);color:#14181d}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .why-grid,.quote-grid{grid-template-columns:1fr}
+  .why-img img{height:340px}
+  section{padding:72px 0}
+  .hero{padding:150px 0 70px}
+}
+@media(max-width:620px){
+  .svc-grid{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .trust{gap:20px}
+  form{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">MARCHER <b>ROOFING</b><small>LEEDS · EST. 1997</small></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a><a href="#why">Why Marcher</a><a href="#areas">Areas</a><a href="#quote">Free Survey</a>
+    </nav>
+    <a class="nav-cta" href="#quote">Free Survey</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="rv in">
+      <p class="kicker">Family-Run Roofers — Leeds, West Yorkshire</p>
+      <h1><span class="o1">ROOFS BUILT </span><span class="o2">TO OUTLAST.</span></h1>
+      <p class="hero-sub">Marcher Roofing Limited has been keeping <b>Leeds homes and businesses</b> watertight since 1997. Pitched, flat, commercial and industrial roofing — surveyed properly, quoted honestly, finished right.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#quote">Request a Free Survey</a>
+        <a class="btn btn-ghost" href="#services">Explore Services →</a>
+      </div>
+      <div class="trust">
+        <div>Family-run since 1997</div>
+        <div>Residential, Commercial &amp; Industrial</div>
+        <div>As seen on DIY SOS</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="hazard"></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">What We Do</p>
+      <h2>EVERY ROOF, <em>COVERED</em></h2>
+      <p>From a slipped tile on a Leeds terrace to a full industrial re-roof — one family-run team, every job surveyed and quoted in writing.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv" onclick="location.href='#quote'">
+        <div class="imgwrap"><span class="num">01</span><img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=1600&auto=format&fit=crop" alt="Pitched slate roof on a residential home"></div>
+        <div class="svc-body"><h3>Pitched Roof Repairs</h3><p>Slipped tiles, broken slates and storm damage put right fast — matched to your existing roof.</p><span class="go">Get a survey →</span></div>
+      </article>
+      <article class="svc rv" onclick="location.href='#quote'">
+        <div class="imgwrap"><span class="num">02</span><img src="https://images.unsplash.com/photo-1597047084897-51e81819a499?q=80&w=1600&auto=format&fit=crop" alt="Roofer laying a flat roof covering"></div>
+        <div class="svc-body"><h3>Flat Roofing</h3><p>Long-life flat roof systems for extensions, garages and dormers — watertight and finished to last.</p><span class="go">Get a survey →</span></div>
+      </article>
+      <article class="svc rv" onclick="location.href='#quote'">
+        <div class="imgwrap"><span class="num">03</span><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Newly completed roof on a modern house"></div>
+        <div class="svc-body"><h3>New Roofs &amp; Re-roofs</h3><p>Complete roof replacements done properly — stripped, re-felted, re-tiled and finished to last.</p><span class="go">Get a survey →</span></div>
+      </article>
+      <article class="svc rv" onclick="location.href='#quote'">
+        <div class="imgwrap"><span class="num">04</span><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1600&auto=format&fit=crop" alt="House exterior with new guttering and fascias"></div>
+        <div class="svc-body"><h3>Guttering &amp; Fascias</h3><p>uPVC guttering, fascias and soffits fitted or replaced — the finishing touch that protects your walls.</p><span class="go">Get a survey →</span></div>
+      </article>
+      <article class="svc rv" onclick="location.href='#quote'">
+        <div class="imgwrap"><span class="num">05</span><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop" alt="Large commercial and industrial roofing project"></div>
+        <div class="svc-body"><h3>Commercial &amp; Industrial</h3><p>Warehouses, factories and business premises across Leeds — scheduled around your operation.</p><span class="go">Get a survey →</span></div>
+      </article>
+      <article class="svc rv" onclick="location.href='#quote'">
+        <div class="imgwrap"><span class="num">06</span><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600&auto=format&fit=crop" alt="Roofer carrying out emergency repair work"></div>
+        <div class="svc-body"><h3>Emergency Repairs</h3><p>Leak or storm damage? Rapid response to make your roof safe, then repair it properly.</p><span class="go">Get a survey →</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap why-grid">
+    <div class="why-img rv"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop" alt="Marcher Roofing team at work on site"></div>
+    <div class="why-copy rv">
+      <p class="kicker">Why Marcher Roofing</p>
+      <h2>A FAMILY NAME YOU CAN <em>TRUST</em></h2>
+      <p>Based in Leeds since 1997, Marcher Roofing is a family-run firm that treats every roof like it's over our own home. No salesmen, no shortcuts — just roofers.</p>
+      <ul class="why-list">
+        <li><span class="tick">✓</span><span><b>Free, no-obligation surveys</b> — we look properly, then quote in writing.</span></li>
+        <li><span class="tick">✓</span><span><b>Residential, commercial &amp; industrial</b> — from terraces to factories.</span></li>
+        <li><span class="tick">✓</span><span><b>Featured on BBC's DIY SOS</b> and Channel 4's Love It or List It.</span></li>
+        <li><span class="tick">✓</span><span><b>Tidy, respectful crews</b> — your property left clean every day.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="tv rv">
+  <div class="wrap">
+    <p class="kicker">As Seen On TV</p>
+    <h2>FEATURED ON DIY SOS &amp; LOVE IT OR LIST IT</h2>
+    <p>Marcher Roofing's work has been featured on BBC's DIY SOS and Channel 4's Love It or List It — the same careful craftsmanship on every job.</p>
+  </div>
+</div>
+
+<section id="areas" class="areas">
+  <div class="wrap rv">
+    <p class="kicker">Where We Work</p>
+    <h2>COVERING <em>LEEDS</em> &amp; BEYOND</h2>
+    <p>Rapid response across Leeds and the surrounding towns.</p>
+    <div class="area-chips">
+      <span>Leeds</span><span>Headingley</span><span>Roundhay</span><span>Morley</span><span>Pudsey</span><span>Bradford</span><span>Wakefield</span><span>Harrogate</span>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="quote">
+  <div class="wrap quote-grid">
+    <div class="q-info rv">
+      <p class="kicker">Free Survey</p>
+      <h2>GET YOUR ROOF <em>SURVEYED</em></h2>
+      <p>Tell us what's going on with your roof and we'll arrange a free, no-obligation survey at a time that suits you.</p>
+      <ol class="q-steps">
+        <li><span class="st">1</span><span>Send the form — tell us about the job.</span></li>
+        <li><span class="st">2</span><span>We visit and survey your roof properly.</span></li>
+        <li><span class="st">3</span><span>You get a clear written quote — no pressure.</span></li>
+      </ol>
+      <p style="margin-top:28px;font-size:15px">Based at: Unit 23 Penraevon Industrial Estate, Leeds</p>
+    </div>
+    <form class="rv" action="#" onsubmit="return false">
+      <div class="f-row">
+        <label>Your name<input type="text" name="name" placeholder="Full name" required></label>
+        <label>Phone<input type="tel" name="phone" placeholder="Best number to reach you" required></label>
+      </div>
+      <label>Email<input type="email" name="email" placeholder="you@example.co.uk"></label>
+      <label>Service needed
+        <select name="service">
+          <option>Pitched Roof Repairs</option><option>Flat Roofing</option>
+          <option>New Roofs &amp; Re-roofs</option><option>Guttering &amp; Fascias</option>
+          <option>Commercial &amp; Industrial</option><option>Emergency Repairs</option>
+          <option>Not sure — need advice</option>
+        </select>
+      </label>
+      <label>Tell us about the job<textarea name="message" placeholder="What needs doing, and where in Leeds?"></textarea></label>
+      <button class="btn btn-solid" type="submit" style="justify-content:center">Request My Free Survey →</button>
+      <p class="form-note">No obligation. We'll be in touch to arrange your survey.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="fname">MARCHER <b>ROOFING</b> LIMITED</span>
+    <span>Unit 23 Penraevon Industrial Estate, Leeds · Family-run since 1997</span>
+    <a class="badge" href="https://altuswebsolutions.com" target="_blank" rel="noopener">✦ Concept by Altus Web Solutions ✦</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
